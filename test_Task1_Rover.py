@@ -99,7 +99,7 @@ class test_string(unittest.TestCase):
       self.assertEqual(self.rv.enrove(self.special),self.special)
 
     def test_derove_special_char(self):
-      #self.assertEqual(self.rv.derove(self.special),self.special)
+      self.assertEqual(self.rv.derove(self.special),self.special)
 
 
 
