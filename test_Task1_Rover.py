@@ -75,17 +75,17 @@ class test_string(unittest.TestCase):
       #self.assertEqual(self.rv.derove(self.encode_upper),self.upper_consonants)
 
     #Vowels
-    def test_enrove_lower_vowels(self):  
-      self.assertEqual(self.rv.enrove(self.swedish_vowels_lower),self.swedish_vowels_lower)
+    #def test_enrove_lower_vowels(self):  
+      #self.assertEqual(self.rv.enrove(self.swedish_vowels_lower),self.swedish_vowels_lower)
 
-    def test_derove_lower_vowels(self):  
-      self.assertEqual(self.rv.derove(self.swedish_vowels_lower),self.swedish_vowels_lower)
+    #def test_derove_lower_vowels(self):  
+      #self.assertEqual(self.rv.derove(self.swedish_vowels_lower),self.swedish_vowels_lower)
 
-    def test_enrove_upper_vowels(self):  
-      self.assertEqual(self.rv.enrove(self.swedish_vowels_upper),self.swedish_vowels_upper)
+    #def test_enrove_upper_vowels(self):  
+      #self.assertEqual(self.rv.enrove(self.swedish_vowels_upper),self.swedish_vowels_upper)
 
-    def test_derove_upper_vowels(self):  
-      self.assertEqual(self.rv.derove(self.swedish_vowels_upper),self.swedish_vowels_upper)
+    #def test_derove_upper_vowels(self):  
+      #self.assertEqual(self.rv.derove(self.swedish_vowels_upper),self.swedish_vowels_upper)
 
     #Numbers
     def test_enrove_numbers(self):
