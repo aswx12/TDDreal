@@ -15,7 +15,7 @@ class rovar:
         '''
         #if normal is None:
              #return None 
-        #This is returning none instead of raising an exception
+        #This is returning none instead of raising an exception.
         if normal is None: #or not isinstance(normal, str):
            raise TypeError("Input must be a non-empty string")
         
