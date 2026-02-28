@@ -23,11 +23,83 @@ class test_string(unittest.TestCase):
         '''
         self.rv = rovar()
 
-    # Example test case to check lower case rover
-    def test_enrove_small(self):
-       self.assertEqual(self.rv.enrove('b'), 'bob')
+        self.lower_consonants = "bcdfghjklmnpqrstvwxz"
+        self.encode_lower = "bobcocdodfofgoghohjojkoklolmomnonpopqoqrorsostotvovwowxoxzoz"
 
-    # You can continue writing your test cases here based on the assignment description
+        self.upper_consonants = "BCDFGHJKLMNPQRSTVWXZ"
+        self.encode_upper = "BOBCOCDODFOFGOGHOHJOJKOKLOLMOMNONPOPQOQRORSOSTOTVOVWOWXOXZOZ"
+
+        self.swedish_vowels_lower ="aeiouyåäö"
+        self.swedish_vowels_upper ="AEIOUYÅÄÖ"
+
+        self.numbers = "0123456789"
+        self.special = "!\"#€%&/(),."
+
+    # Example test case to check lower case rover
+    # def test_enrove_small(self):
+    #    self.assertEqual(self.rv.enrove('b'), 'bob')
+
+    # You can continue writing your test cases here based on the assignment description 
+
+    #--------------------------Null input---------------------------------
+    def test_enrove_null_input(self): #null input raises bug
+      # None should raise TypeError 
+      with self.assertRaises(TypeError):
+        self.rv.enrove(None)
+    
+    def test_derove_null_input(self):
+      with self.assertRaises((TypeError, ValueError)):
+          self.rv.derove(None)
+
+    #--------------------------Empty string---------------------------------
+    def test_enrove_empty_string(self):
+      # if input "" --> should return ""
+      self.assertEqual(self.rv.enrove(""), "")
+    
+    def test_derove_empty_string(self):
+      self.assertEqual(self.rv.enrove(""), "")
+
+    #--------------------------Non-empty Strings---------------------------------
+    #consonants sets triggered bugs as both sets missed g respective d
+    #Consonants
+    def test_enrove_lower_consotants(self):  
+      self.assertEqual(self.rv.enrove(self.lower_consonants),self.encode_lower)
+    
+    def test_derove_lower_consotants(self):  
+      self.assertEqual(self.rv.derove(self.encode_lower),self.lower_consonants)
+
+    def test_enrove_upper_consotants(self):  
+      self.assertEqual(self.rv.enrove(self.upper_consonants),self.encode_upper)
+    
+    def test_derove_upper_consotants(self):  
+      self.assertEqual(self.rv.derove(self.encode_upper),self.upper_consonants)
+
+    #Vowels
+    def test_enrove_lower_vowels(self):  
+      self.assertEqual(self.rv.enrove(self.swedish_vowels_lower),self.swedish_vowels_lower)
+
+    def test_derove_lower_vowels(self):  
+      self.assertEqual(self.rv.derove(self.swedish_vowels_lower),self.swedish_vowels_lower)
+
+    def test_enrove_upper_vowels(self):  
+      self.assertEqual(self.rv.enrove(self.swedish_vowels_upper),self.swedish_vowels_upper)
+
+    def test_derove_upper_vowels(self):  
+      self.assertEqual(self.rv.derove(self.swedish_vowels_upper),self.swedish_vowels_upper)
+
+    #Numbers
+    def test_enrove_numbers(self):
+      self.assertEqual(self.rv.enrove(self.numbers),self.numbers)
+
+    def test_derove_numbers(self):
+      self.assertEqual(self.rv.derove(self.numbers),self.numbers)
+
+    #Special char
+    def test_enrove_special_char(self):
+      self.assertEqual(self.rv.enrove(self.special),self.special)
+
+    def test_derove_special_char(self):
+      self.assertEqual(self.rv.derove(self.special),self.special)
 
 
 
