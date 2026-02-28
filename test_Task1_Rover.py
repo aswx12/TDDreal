@@ -53,7 +53,7 @@ class test_string(unittest.TestCase):
 
     #--------------------------Empty string---------------------------------
     def test_enrove_empty_string(self):
-       #if input "" --> should return ""
+       #input "" --> should return ""
       self.assertEqual(self.rv.enrove(""), "")
     
     def test_derove_empty_string(self):
