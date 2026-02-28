@@ -57,7 +57,7 @@ class test_string(unittest.TestCase):
       self.assertEqual(self.rv.enrove(""), "")
     
     def test_derove_empty_string(self):
-      self.assertEqual(self.rv.enrove(""), "")
+      self.assertEqual(self.rv.derove(""), "")
 
     #--------------------------Non-empty Strings---------------------------------
     #consonants sets triggered bugs as both sets missed g respective d
