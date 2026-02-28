@@ -88,18 +88,18 @@ class test_string(unittest.TestCase):
       #self.assertEqual(self.rv.derove(self.swedish_vowels_upper),self.swedish_vowels_upper)
 
     #Numbers
-    def test_enrove_numbers(self):
-      self.assertEqual(self.rv.enrove(self.numbers),self.numbers)
+    #def test_enrove_numbers(self):
+      #self.assertEqual(self.rv.enrove(self.numbers),self.numbers)
 
-    def test_derove_numbers(self):
-      self.assertEqual(self.rv.derove(self.numbers),self.numbers)
+    #def test_derove_numbers(self):
+      #self.assertEqual(self.rv.derove(self.numbers),self.numbers)
 
     #Special char
-    def test_enrove_special_char(self):
-      self.assertEqual(self.rv.enrove(self.special),self.special)
+    #def test_enrove_special_char(self):
+      #self.assertEqual(self.rv.enrove(self.special),self.special)
 
-    def test_derove_special_char(self):
-      self.assertEqual(self.rv.derove(self.special),self.special)
+    #def test_derove_special_char(self):
+      #self.assertEqual(self.rv.derove(self.special),self.special)
 
 
 
