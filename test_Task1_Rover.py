@@ -9,8 +9,8 @@ from Task1_Rover import rovar
 
 class test_string(unittest.TestCase):
     '''
-        _LOWER_CONSTANTS = "bcdfhjklmnpqrstvwxz"
-        _UPPER_CONSTANTS = "BCFGHJKLMNPQRSTVWXZ"
+        _LOWER_CONSTANTS = "bcdfghjklmnpqrstvwxz" #missing g
+        _UPPER_CONSTANTS = "BCDFGHJKLMNPQRSTVWXZ" #missing D
         Swedish vowels = ['a', 'e', 'i', 'o', 'u', 'y', 'å', 'ä', 'ö']
 
         Write your TCs based on the lab instructions. One TC has been written below as an example
@@ -110,4 +110,4 @@ class test_string(unittest.TestCase):
 
 if __name__ == '__main__':
     print("***********START OF All TEST CASES RESULTS SHOWN BELOW**************")
-    unittest.main(verbosity = 2)
+    unittest.main(argv=[''], verbosity=2, exit=False) #argv=[''] --> prevents unittest from trying to parse Colab’s notebook arguments
