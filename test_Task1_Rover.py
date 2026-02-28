@@ -108,6 +108,6 @@ class test_string(unittest.TestCase):
 
 
 
-#if __name__ == '__main__':
-    #print("***********START OF All TEST CASES RESULTS SHOWN BELOW**************")
-    #unittest.main(argv=[''], verbosity=2, exit=False) #argv=[''] --> prevents unittest from trying to parse Colab’s notebook arguments
+if __name__ == '__main__':
+    print("***********START OF All TEST CASES RESULTS SHOWN BELOW**************")
+    unittest.main(argv=[''], verbosity=2, exit=False) #argv=[''] --> prevents unittest from trying to parse Colab’s notebook arguments
