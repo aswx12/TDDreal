@@ -2,8 +2,8 @@
 class rovar:
 
     def __init__(self) -> None:
-        self._LOWER_CONSTANTS = "bcdfhjklmnpqrstvwxz"
-        self._UPPER_CONSTANTS = "BCFGHJKLMNPQRSTVWXZ"
+        self._LOWER_CONSTANTS = "bcdfghjklmnpqrstvwxz" #missed g
+        self._UPPER_CONSTANTS = "BCDFGHJKLMNPQRSTVWXZ" #missed D
  
     def enrove(self, normal: str)-> str: 
         '''
@@ -13,19 +13,18 @@ class rovar:
         Returns:
             (str) Encoded String
         '''
-        #if rov is None:
-            #return None 
-        #This is returning none instead of raising an exception¨
-        #-->  test test sfsfssafasf
-        if normal is None or not isinstance(normal, str):
-          raise TypeError("Input must be a non-empty string")
+        #if normal is None:
+             #return None 
+        #This is returning none instead of raising an exception
+        if normal is None: #or not isinstance(normal, str):
+           raise TypeError("Input must be a non-empty string")
         
         encoded = []
         for char in normal:
             if char in self._LOWER_CONSTANTS:
                 encoded.append(char + 'o' + char)
             elif char in self._UPPER_CONSTANTS:
-                encoded.append(char + 'o' + char)
+                encoded.append(char + 'O' + char) #used lowercase o instead of uppercase O
             else:
                 encoded.append(char)
         return ''.join(encoded)
@@ -39,7 +38,8 @@ class rovar:
                 (str) Normal string
         """
         if rov is None:
-            return None
+            #return None: returning none instead of raising error
+            raise TypeError("Input must be a non-empty string")
        
         for c in self._LOWER_CONSTANTS:
             find = c+'o'+c
