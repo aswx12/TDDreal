@@ -36,8 +36,8 @@ class test_string(unittest.TestCase):
         self.special = "!\"#€%&/(),."
 
     # Example test case to check lower case rover
-    # def test_enrove_small(self):
-    #    self.assertEqual(self.rv.enrove('b'), 'bob')
+    def test_enrove_small(self):
+      self.assertEqual(self.rv.enrove('b'), 'bob')
 
     # You can continue writing your test cases here based on the assignment description 
 
