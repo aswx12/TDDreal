@@ -48,7 +48,7 @@ class test_string(unittest.TestCase):
         self.rv.enrove(None)
     
     def test_derove_null_input(self):
-      with self.assertRaises((TypeError, ValueError)):
+      with self.assertRaises(TypeError):
           self.rv.derove(None)
 
     #--------------------------Empty string---------------------------------
